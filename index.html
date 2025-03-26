@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrap Calculator</title>
+<link rel="stylesheet" href="style.css">
+<body>
+<h1>Rust Calculator</h1>
+
+<div class="selectRecycler">
+    <button type="goodRecycler" class="goodRecycler" onclick="goodRecycler()">
+        <span class="goodRecyclerIcon">
+            <img src="rustGoodRecycler.jpg">
+        </span>
+    </button>
+    <button type="trashRecycler" class="trashRecycler" onclick="trashRecycler()">
+        <span class="trashRecycler">
+            <img src="rustTrashRecycler.jpg">
+        </span>
+    </button>
+</div>
+<div class="components">
+    <h1>INPUT</h1>
+    <img src="rust.Blade.jpg">
+    <input type="number" min="0" id="blades" onchange="counter()">
+    <img src="rustCamera.jpg">
+    <input type="number" min ="0" id="cameras" onchange="counter()">
+    <img src="rustFuse.jpg">
+    <input type="number" min="0" id="fuses" onchange="counter()">
+    <img src="rustGear.jpg">
+    <input type="number" min="0" id="gears" onchange="counter()">
+    <img src="rustLaptop.jpg">
+    <input type="number" min="0" id="laptops" onchange="counter()">
+    <img src="rustPipe.jpg">
+    <input type="number" min="0" id="pipes" onchange="counter()">
+    <img src="rustPropane.jpg">
+    <input type="number" min="0" id="propanes" onchange="counter()">
+    <img src="rustRifle.jpg">
+    <input type="number" min="0" id="rifles" onchange="counter()">
+    <img src="rustRope.jpg">
+    <input type="number" min="0" id="ropes" onchange="counter()">
+    <img src="rustSemi.jpg">
+    <input type="number" min="0" id="semis" onchange="counter()">
+    <img src="rustSewing.jpg">
+    <input type="number" min="0" id="sewings" onchange="counter()">
+    <img src="rustSheet.jpg">
+    <input type="number" min="0" id="sheets" onchange="counter()">
+    <img src="rustSign.jpg">
+    <input type="number" min="0" id="signs" onchange="counter()">
+    <img src="rustSMG.jpg">
+    <input type="number" min="0" id="smgs" onchange="counter()">
+    <img src="rustSpring.jpg">
+    <input type="number" min="0" id="springs" onchange="counter()">
+    <img src="rustTarp.jpg">
+    <input type="number" min="0" id="tarps" onchange="counter()">
+    <img src="rustTech.jpg">
+    <input type="number" min="0" id="techTrash" onchange="counter()">
+</div>
+<div>    
+    <button type="resetRecycler" class="resetRecycler" onclick="resetRecyclerer()">
+    <span class="resetRecycler">
+        <img src="rustGunpowder.png">
+    </span>
+    </button>
+</div>
+<div class="output">
+    <h1>OUTPUT</h1>
+    <img src="rustScrap.jpg">
+    <input type="number" min="0" id="scraps" readonly>
+    <img src="rustMetalFragment.jpg">
+    <input type="number" min="0" id="metalfrags" readonly>
+    <img src="rustHighQualityMetal.jpg">
+    <input type="number" min="0" id="hqms" readonly>
+    <img src="rustCloth.jpg">
+    <input type="number" min="0" id="cloths" readonly>
+    <img src="rustRope.jpg">
+    <input type="number" min="0" id="rops" readonly>
+    <img src="rustTech.jpg">
+    <input type="number" min="0" id="techtrashes" readonly>
+
+    <button type="recycleOnceMore" class="recycleOnceMore" onclick="furtherRecycle()">
+        <span class="trashRecycler">
+            <img src="rustTrashRecycler.jpg">
+        </span>
+    </button>
+</div>
+<div class ="quarries">
+    <h1>QUARRIES</h1>
+    <img src="rustDiesel.jpg">
+    <input type="number" min="0" id="diesel" onchange="quarry()">
+    <img src="rustSulfur.png">
+    <input type="number" min="0" id="sulfur" readonly>
+    <img src="sulfurOre.png">
+    <input type="number" min="0" id="sulfurOre" readonly>
+    <img src="rustHighQualityMetal.jpg">
+    <input type="number" min="0" id="hqm" readonly>
+    <img src="hqmOreRust.png">
+    <input type="number" min="0" id="hqmOre" readonly>
+    <img src="rustMetalFragment.jpg">
+    <input type="number" min="0" id="metalfragments" readonly>
+    <img src="rustStone.png">
+    <input type="number" min="0" id="stone" readonly>
+    <button type="giantExcavator" class="giantExcavator" onclick="setGiantExcavator(); quarry()">
+        <span class="giantExcavator">
+            <img src="giantExcavator.jpeg">
+        </span>
+    </button>
+</div>
+
+<div class="furnaces">
+    <h1>FURNACES</h1>
+    <img src="hqmOreRust.png">
+    <input type="number" min="0" id="cookHqm" onchange="cook()">
+    <img src="sulfurOre.png">
+    <input type="number" min="0" id="cookSulfur" onchange="cook()">
+    <img src="rustMetalOre.png">
+    <input typre="number" min="0" id="cookMetal" onchange="cook()">
+    <img src="rustWood.png">
+    <input type="number" min="0" id="cookWood" readonly>
+    <img src="rustCharcoal.png">
+    <input type="number" min="0" id="cookedWood" readonly>
+    <p1>Time: <input type="text" id="time" readonly></p1>
+    <button type="furnace" class="furnace" onclick="furnace()">
+        <span class="furnace">
+            <input type="number" min="1" id="furnacecook" onchange="cook()">
+            <img src="rustFurnace.png">
+        </span>
+    </button>
+    <button type="electricFurnace" class="electricFurnace" onclick="electricFurnace()">
+        <span class="electricFurnace">
+            <input type="number" min="1" id="electricCook" onchange="cook()">
+            <img src="electricFurnace.png">
+        </span>
+    </button>
+    <button type="largeFurnace" class="largeFurnace" onclick="largeFurnace()">
+        <span class="largeFurnace">
+            <input type="number" min="1" id="largeCook" onchange="cook()">
+            <img src="rustLargeFurnace.png">
+        </span>
+    </button>
+    
+    
+</div>
+
+<div class="refinery">
+    <h1>REFINERY</h1>
+    <p2>Time: <input type="text" id="refineTime" readonly></p2>
+    <button type="oilRefinery" class="oilRefinery" onclick="refine()">
+        <span class="oilRefinery">
+            <input type="number" min="1" id="oilRefinery" onchange="refine()">
+            <img src="small.oil.refinery.png">
+        </span>
+    </button>
+    <img src="rustWood.png">
+    <input type="number" min="0" id="refineWood" readonly>
+    <img src="rustCharcoal.png">
+    <input type="number" min="0" id="refinedWood" readonly>
+    <img src="crude.png">
+    <input type="number" min="0" id="crude" onchange="refine()">
+    <img src="lgf.png">
+    <input type="number" min="0" id="lgf" onchange="refine()">
+</div>
+<div class="gunpowder">
+    <h1>GUNPOWDER CRAFTING</h1>
+    <img src="rustGunpowder.png">
+    <input type="number" min="0" id="gp" onchange="gunpowder()">
+    <img src="rustSulfur.png">
+    <input type="number" min="0" id="gpSulfur" onchange="sulfur()">
+    <img src="rustCharcoal.png">
+    <input type="number" min="0" id="gpCharcoal" readonly>
+    <button type="workbench" class="workbench" onclick="workbench()">
+        <span class="workbench">
+            <img src="rustWorkbench1.png">
+        </span>
+    <button type="mixingTable" class="mixingTable" onclick="mixingtable()">
+        <span class="mixingTable" >
+            <img src="rustMixing.png">
+        </span>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

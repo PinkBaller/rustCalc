@@ -1,0 +1,143 @@
+body{
+    background-image: url(Rust\ –\ Teil-Nachladen\,\ neues\ Monument\ und\ zwei\ Waffen\ im\ QoL-Update.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+h4{
+    color: white;
+    text-align: center;
+}
+h5{
+    color: white;
+    text-align: center;
+}
+.components img{
+    width: 150px;
+    height: 150px;
+    
+    margin-left:5%;
+    
+}
+.components input{
+    width: 35px;
+    height: 20px;
+    display:inline;
+    margin-top: 5%;
+}
+
+.output .recycleOnceMore
+{
+    position: absolute;
+    border: none;
+    cursor: pointer;
+}
+
+.components {
+    margin-top: 15%;
+}
+
+.output img{
+    width: 150px;
+    height: 150px;
+    display:row;
+    margin-left: 3%;
+}
+
+.quarries img{
+    width: 150px;
+    height: 150px;
+    display:row;
+    margin-left: 3%;
+}
+
+h2
+{
+    text-align:center;
+    color:white;
+}
+
+h3
+{
+    margin-top: 5%;
+    text-align:center;
+    color:white;
+}
+.output input
+{
+    width: 40px;
+    height: 20px;
+    display:inline;
+    margin-top: 5%;
+}
+
+.selectRecycler {
+    margin:auto;
+    width: 50%;
+    padding: 10px;
+}
+.selectRecycler .trashRecycler{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    border: none;
+    cursor: pointer;
+}
+.trashRecycler img{
+    position: absolute;    
+    height: 250px;
+    width: 250px;
+}
+
+.selectRecycler .goodRecycler{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    border: none;
+    cursor: pointer;
+}
+.goodRecycler img{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+}
+
+.furnaces img{
+    width: 150px;
+    height: 150px;
+    
+    margin-left:5%;
+    
+}
+
+.refinery img{
+    width: 150px;
+    height: 150px;
+    
+    margin-left:5%;
+    
+}
+h1{
+    color: white;
+    text-align: center;
+}
+
+.gunpowder .workbench
+{
+    
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
+.gunpowder .mixingTable
+{
+
+    position:relative;
+    border: none;
+    cursor: pointer;
+}
